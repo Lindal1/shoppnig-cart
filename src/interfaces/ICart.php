@@ -1,5 +1,5 @@
 <?php
-
+namespace lindal1\interfaces;
 /**
  * User: lindal
  * Date: 21.03.17
@@ -9,29 +9,47 @@ interface ICart
 {
 
     /**
+     * Returned items from cart
      * @return ICartItem[]
      */
     public function getItems(): array;
 
     /**
+     * Returned cart by customerId
+     * @param int $customerId
      * @return ICart
      */
-    public static function getCart(): ICart;
+    public static function getCart(int $customerId): ICart;
 
     /**
+     * Returned new cart item related with this cart
      * @return ICartItem
      */
     public function createItem(): ICartItem;
 
     /**
-     * Clear shopping cart
+     * Remove all items from cart
      * @return null
      */
     public function clear(): null;
 
-    public function getItemCount();
+    /**
+     * @return int
+     */
+    public function getItemCount(): int;
 
-    public function getTotalPrice();
+    /**
+     * @return float
+     */
+    public function getTotalPrice(): float;
 
-    public function getCustomerId();
+    /**
+     * @return int
+     */
+    public function getCustomerId(): int;
+
+    /**
+     * @return int
+     */
+    public function getTotalQty(): int;
 }

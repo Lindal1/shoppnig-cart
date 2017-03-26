@@ -1,0 +1,20 @@
+{
+  "name": "lindal1/shopping-cart",
+  "type": "yii-module",
+  "description": "",
+  "authors": [
+    {
+      "name": "Ilya Syardin",
+      "email": "syardin.ilya@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "lindal1\\": "src/"
+    }
+  }
+}
